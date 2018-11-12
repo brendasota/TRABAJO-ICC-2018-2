@@ -1,0 +1,15 @@
+#DATOS PRINCIPALES
+poblacion_total={"población total":[29381884],"hombres":[14450757], "mujeres":[14931127]}
+
+poblacion_zona_rural={"población total zona rural":[6069991], "hombres":[3073271], "mujeres":[2996720]}
+poblacion_zona_urbana={"población total zona urbana":[23311893], "hombres":[11377486],"mujeres":[11934407]}
+
+#POBLACIÓN CON ALGUNA DIFICULTAD
+poblacion_con_dificultad={"población total con alguna dificultad":[3051612], "hombres":[1312433], "mujeres":[1739179]}
+poblacion_zona_rural_dificultad={"población total":[564324],"hombres":[273331], "mujeres":[27990940]}
+poblacion_zona_urbana_dificultad={"población total":[2487288],"hombres":[1039032], "mujeres":[1448186]}
+
+
+
+
+
