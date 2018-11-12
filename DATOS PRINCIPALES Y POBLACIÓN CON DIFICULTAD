@@ -9,6 +9,12 @@ poblacion_con_dificultad={"población total con alguna dificultad":[3051612], "h
 poblacion_zona_rural_dificultad={"población total":[564324],"hombres":[273331], "mujeres":[27990940]}
 poblacion_zona_urbana_dificultad={"población total":[2487288],"hombres":[1039032], "mujeres":[1448186]}
 
+#POBLACIÓN ANALFABETA
+poblacion_analfabeta={"población total":[1262075], "hombres":[322297], "mujeres":[939778]}
+poblacion_zona_urbana_analfabeta={"población total":[553196],"hombres":[130157],"mujeres":[423039]}
+poblacion_zona_rural_analfabeta={"población total":[708879],"hombres":[192140],"mujeres":[516739]}
+
+
 
 
 
