@@ -1,0 +1,305 @@
+from tkinter import*
+
+
+
+def segundapregunta():
+
+    TercerLabel=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: ")
+
+    TercerLabel.grid(row=5,column=1)
+
+#DATOS PRINCIPALES
+
+poblacion_total={"población total":[29381884],"hombres":[14450757], "mujeres":[14931127]}
+
+
+
+
+
+poblacion_zona_rural={"población total zona rural":[6069991], "hombres":[3073271], "mujeres":[2996720]}
+
+poblacion_zona_urbana={"población total zona urbana":[23311893], "hombres":[11377486],"mujeres":[11934407]}
+
+
+
+
+
+#POBLACIÓN CON ALGUNA DIFICULTAD
+
+poblacion_con_dificultad={"población total":[3051612], "hombres":[1312433], "mujeres":[1739179]}
+
+poblacion_zona_rural_dificultad={"población total":[564324],"hombres":[273331], "mujeres":[290993]}
+
+poblacion_zona_urbana_dificultad={"población total":[2487288],"hombres":[1039032], "mujeres":[1448186]}
+
+#POBLACIÓN ANALFABETA
+
+poblacion_analfabeta={"población total":[1262075], "hombres":[322297], "mujeres":[939778]}
+
+poblacion_zona_urbana_analfabeta={"población total":[553196],"hombres":[130157],"mujeres":[423039]}
+
+poblacion_zona_rural_analfabeta={"población total":[708879],"hombres":[192140],"mujeres":[516739]}
+
+bienvenidos="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones"
+
+
+
+
+
+
+
+
+
+#dificultad hombres
+
+def hombres_dificultad():
+
+    for i in poblacion_total["hombres"]:
+
+        j=i
+
+    for l in poblacion_zona_rural["hombres"]:
+
+        k=l
+
+    for h in poblacion_zona_urbana["hombres"]:
+
+        f=h
+
+    for i in poblacion_con_dificultad["hombres"]:
+
+        x=i
+
+    for m in poblacion_zona_rural_dificultad["hombres"]:
+
+        y=m
+
+    for n in poblacion_zona_urbana_dificultad["hombres"]:
+
+        z=n
+
+    print("El ",round(x/j*100),"% de hombres  sufren alguna dificultad")
+
+    print("El ",round(y/k*100),"% de hombres que viven en la zona rural sufren alguna dificultad")
+
+    print("El ",round(z/f*100),"% de hombres que viven en la zona urbana sufren alguna dificultad")
+
+
+
+
+
+    #dificultad mujeres
+
+def mujeres_dificultad():
+
+    for i in poblacion_total["mujeres"]:
+
+        j=i
+
+    for l in poblacion_zona_rural["mujeres"]:
+
+        k=l
+
+    for h in poblacion_zona_urbana["mujeres"]:
+
+        f=h
+
+    for i in poblacion_con_dificultad["mujeres"]:
+
+        x=i
+
+    for m in poblacion_zona_rural_dificultad["mujeres"]:
+
+        y=m
+
+    for n in poblacion_zona_urbana_dificultad["mujeres"]:
+
+        z=n
+
+    print("El ",round(x/j*100),"% de mujeres  sufren alguna dificultad")
+
+    print("El ",round(y/k*100),"% de mujeres que viven en la zona rural sufren alguna dificultad")
+
+    print("El ",round(z/f*100),"% de mujeres que viven en la zona urbana sufren alguna dificultad")
+
+
+
+
+
+    #Analfabetismo mujeres
+
+def analfabetismo_mujeres():
+
+    for i in poblacion_total["mujeres"]:
+
+        j=i
+
+    for l in poblacion_zona_rural["mujeres"]:
+
+        k=l
+
+    for h in poblacion_zona_urbana["mujeres"]:
+
+        f=h
+
+    for i in poblacion_analfabeta["mujeres"]:
+
+        x=i
+
+    for m in poblacion_zona_rural_analfabeta["mujeres"]:
+
+        y=m
+
+    for n in poblacion_zona_urbana_analfabeta["mujeres"]:
+
+        z=n
+
+    print("El ",round(x/j*100),"% de mujeres  son analfabetas")
+
+    print("El ",round(y/k*100),"% de mujeres que viven en la zona rural son analfabetas")
+
+    print("El ",round(z/f*100),"% de mujeres que viven en la zona urbana son analfabetas")
+
+
+
+
+
+    #Analfabetismo hombres
+
+def analfabetismo_hombres():
+
+    for i in poblacion_total["hombres"]:
+
+        j=i
+
+    for l in poblacion_zona_rural["mujeres"]:
+
+        k=l
+
+    for h in poblacion_zona_urbana["hombres"]:
+
+        f=h
+
+    for i in poblacion_analfabeta["hombres"]:
+
+        x=i
+
+    for m in poblacion_zona_rural_analfabeta["hombres"]:
+
+        y=m
+
+    for n in poblacion_zona_urbana_analfabeta["hombres"]:
+
+        z=n
+
+    print("El ",round(x/j*100),"% de hombres  son analfabetas")
+
+    print("El ",round(y/k*100),"% de hombres que viven en la zona rural son analfabetas")
+
+    print("El ",round(z/f*100),"% de hombres que viven en la zona urbana son analfabetas")
+
+
+
+
+
+def sipresionasnoenlaprimera():
+
+    MiLabel4=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ")
+
+    MiLabel4.grid(row=8,column=1)
+
+
+
+
+
+#función principal
+
+def porcentaje_poblacion_dificultad(a, b):
+
+    if a=="si":
+
+        if b=="si":
+
+            c=input("Escriba hombres/mujeres")
+
+            if c=="hombres":
+
+                hombres_dificultad()
+
+            if c=="mujeres":
+
+                mujeres_dificultad()
+
+    if a=="no":
+
+        d=input("¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ")
+
+        if d=="si":
+
+            b=input("¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: " )
+
+            if b=="si":
+
+                c=input("Escriba hombres/mujeres: ")
+
+                if c=="hombres":
+
+                    analfabetismo_hombres()
+
+                elif c=="mujeres":
+
+                    analfabetismo_mujeres()
+
+                else:
+
+                    print("el dato es inválido, vuelva a colocarlo")
+
+                    d=="si"
+
+                    b=="si"
+
+
+
+
+
+a=input("¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no: ")
+
+b=input("¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: " )
+
+
+
+
+
+porcentaje_poblacion_dificultad(a,b)
+
+proyecticc=Tk()
+
+proyecticc.geometry("900x400+100+100")
+
+proyecticc.resizable(1,1)
+
+miFrame=Frame(proyecticc,width=1200,height=600)
+
+miFrame.pack()
+
+proyecticc.title("Proyecto de Icc")
+
+PrimerLabel=Label(miFrame,text="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones")
+
+PrimerLabel.grid(row=1,column=1)
+
+SegundoLabel=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no:")
+
+SegundoLabel.grid(row=2,column=1)
+
+botonenvio=Button(proyecticc,text="Si",command=segundapregunta)
+
+botonenvio.pack()
+
+botonenvio2=Button(proyecticc,text="No",command=sipresionasnoenlaprimera)
+
+botonenvio2.pack()
+
+
+
+proyecticc.mainloop()
