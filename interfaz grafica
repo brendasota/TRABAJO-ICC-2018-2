@@ -1,276 +1,171 @@
 from tkinter import*
 
-
-
-def segundapregunta():
-
-    TercerLabel=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: ")
-
-    TercerLabel.grid(row=5,column=1)
-
-#DATOS PRINCIPALES
-
-poblacion_total={"población total":[29381884],"hombres":[14450757], "mujeres":[14931127]}
-
-
-
-
-
-poblacion_zona_rural={"población total zona rural":[6069991], "hombres":[3073271], "mujeres":[2996720]}
-
-poblacion_zona_urbana={"población total zona urbana":[23311893], "hombres":[11377486],"mujeres":[11934407]}
-
-
-
-
-
-#POBLACIÓN CON ALGUNA DIFICULTAD
-
-poblacion_con_dificultad={"población total":[3051612], "hombres":[1312433], "mujeres":[1739179]}
-
-poblacion_zona_rural_dificultad={"población total":[564324],"hombres":[273331], "mujeres":[290993]}
-
-poblacion_zona_urbana_dificultad={"población total":[2487288],"hombres":[1039032], "mujeres":[1448186]}
-
-#POBLACIÓN ANALFABETA
-
-poblacion_analfabeta={"población total":[1262075], "hombres":[322297], "mujeres":[939778]}
-
-poblacion_zona_urbana_analfabeta={"población total":[553196],"hombres":[130157],"mujeres":[423039]}
-
-poblacion_zona_rural_analfabeta={"población total":[708879],"hombres":[192140],"mujeres":[516739]}
-
 bienvenidos="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones"
 
+cambiarsino=[1,2,3]
 
+def Desicionentrehombresymujeres():
 
+    decide_HoM=Label(miFrame,text="Presione el boton del genero que le interesa:",font=("Comic Sans MS",10))
 
+    decide_HoM.place(x=10,y=130)
 
+    botondeloshombres=Button(proyecticc,text="Hombres",command=sipresionoHombres)
 
+    botondeloshombres.place(x=150,y=150)
 
+    botondelasmujeres=Button(proyecticc,text="Mujeres",command=sipresionoMujeres)
 
+    botondelasmujeres.place(x=220,y=150)
 
-#dificultad hombres
+def sipresionoMujeres():
 
-def hombres_dificultad():
+    if 2 in cambiarsino:
 
-    for i in poblacion_total["hombres"]:
+        mujeresdificultad=Label(miFrame,text="El  12 % de mujeres  sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        j=i
+        mujeresdificultad.place(x=10,y=180)
 
-    for l in poblacion_zona_rural["hombres"]:
+        mujereszonarural=Label(miFrame,text="El  10 % de mujeres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        k=l
+        mujereszonarural.place(x=10,y=200)
 
-    for h in poblacion_zona_urbana["hombres"]:
+        mujereszonaurbana=Label(miFrame,text="El  12 % de mujeres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        f=h
+        mujereszonaurbana.place(x=10,y=220)
 
-    for i in poblacion_con_dificultad["hombres"]:
+        cambiarsino.remove(2)
 
-        x=i
+def sipresionoHombres():
 
-    for m in poblacion_zona_rural_dificultad["hombres"]:
+    if 2 in cambiarsino:
 
-        y=m
+        hombresdificultad=Label(miFrame,text="El  9 % de mujeres  sufren alguna dificultad",font=("Comic Sans MS",10))
 
-    for n in poblacion_zona_urbana_dificultad["hombres"]:
+        hombresdificultad.place(x=10,y=180)
 
-        z=n
+        hombresrural=Label(miFrame,text="El  9 % de mujeres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
 
-    print("El ",round(x/j*100),"% de hombres  sufren alguna dificultad")
+        hombresrural.place(x=10,y=200)
 
-    print("El ",round(y/k*100),"% de hombres que viven en la zona rural sufren alguna dificultad")
+        hombresurbana=Label(miFrame,text="El  9 % de mujeres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
 
-    print("El ",round(z/f*100),"% de hombres que viven en la zona urbana sufren alguna dificultad")
+        hombresurbana.place(x=10,y=220)
 
-
-
-
+        cambiarsino.remove(2)
 
     #dificultad mujeres
 
-def mujeres_dificultad():
+def sipresionassienlaprimera():
 
-    for i in poblacion_total["mujeres"]:
+    if 1 in cambiarsino:
 
-        j=i
+        TercerLabel=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: ",font=("Comic Sans MS",10))
 
-    for l in poblacion_zona_rural["mujeres"]:
+        TercerLabel.place(x=10,y=85)
 
-        k=l
+        BotonA_si_pregunta2=Button(proyecticc,text="si",command=Desicionentrehombresymujeres)
 
-    for h in poblacion_zona_urbana["mujeres"]:
+        BotonA_si_pregunta2.place(x=180,y=105)
 
-        f=h
+        BotonA_no_pregunta2=Button(proyecticc,text="no",command=quit)
 
-    for i in poblacion_con_dificultad["mujeres"]:
+        BotonA_no_pregunta2.place(x=200,y=105)
 
-        x=i
+        cambiarsino.remove(1)
 
-    for m in poblacion_zona_rural_dificultad["mujeres"]:
+#este es la funcion de analfabetas:
 
-        y=m
+def hombresanalfabetas():
 
-    for n in poblacion_zona_urbana_dificultad["mujeres"]:
+    if 3 in cambiarsino:
 
-        z=n
+        hombresquesonanalfabetas=Label(miFrame,text="El  2 % de hombres  son analfabetas",font=("Comic Sans MS",10))
 
-    print("El ",round(x/j*100),"% de mujeres  sufren alguna dificultad")
+        hombresquesonanalfabetas.place(x=10,y=215)
 
-    print("El ",round(y/k*100),"% de mujeres que viven en la zona rural sufren alguna dificultad")
+        hombresanalfabetasrural=Label(miFrame,text="El  6 % de hombres que viven en la zona rural son analfabetas",font=("Comic Sans MS",10))
 
-    print("El ",round(z/f*100),"% de mujeres que viven en la zona urbana sufren alguna dificultad")
+        hombresanalfabetasrural.place(x=10,y=235)
 
+        hombresanalfabetasurbana=Label(miFrame,text="El  1 % de hombres que viven en la zona urbana son analfabetas",font=("Comic Sans MS",10))
 
+        hombresanalfabetasurbana.place(x=10,y=255)
 
+        cambiarsino.remove(3)
 
+def mujeresanalfabetas():
 
-    #Analfabetismo mujeres
+    if 3 in cambiarsino:
 
-def analfabetismo_mujeres():
+        mujeresquesonanalfabetas=Label(miFrame,text="El  6 % de mujeres  son analfabetas",font=("Comic Sans MS",10))
 
-    for i in poblacion_total["mujeres"]:
+        mujeresquesonanalfabetas.place(x=10,y=215)
 
-        j=i
+        mujeresanalfabetasrural=Label(miFrame,text="El  17 % de mujeres que viven en la zona rural son analfabetas",font=("Comic Sans MS",10))
 
-    for l in poblacion_zona_rural["mujeres"]:
+        mujeresanalfabetasrural.place(x=10,y=235)
 
-        k=l
+        mujeresanalfabetasurbana=Label(miFrame,text="El  4 % de mujeres que viven en la zona urbana son analfabetas",font=("Comic Sans MS",10))
 
-    for h in poblacion_zona_urbana["mujeres"]:
+        mujeresanalfabetasurbana.place(x=10,y=255)
 
-        f=h
-
-    for i in poblacion_analfabeta["mujeres"]:
-
-        x=i
-
-    for m in poblacion_zona_rural_analfabeta["mujeres"]:
-
-        y=m
-
-    for n in poblacion_zona_urbana_analfabeta["mujeres"]:
-
-        z=n
-
-    print("El ",round(x/j*100),"% de mujeres  son analfabetas")
-
-    print("El ",round(y/k*100),"% de mujeres que viven en la zona rural son analfabetas")
-
-    print("El ",round(z/f*100),"% de mujeres que viven en la zona urbana son analfabetas")
+        cambiarsino.remove(3)
 
 
 
 
 
-    #Analfabetismo hombres
+def porcentajeanalfabetashombresomujeres():
 
-def analfabetismo_hombres():
+    escogerHoM=Label(miFrame,text="Presione el boton del genero que le interesa",font=("Comic Sans MS",10))
 
-    for i in poblacion_total["hombres"]:
+    escogerHoM.place(x=10,y=168)
 
-        j=i
+    botondehombres2=Button(proyecticc,text="hombres",command=hombresanalfabetas)
 
-    for l in poblacion_zona_rural["mujeres"]:
+    botondehombres2.place(x=150,y=190)
 
-        k=l
+    botondemujeres2=Button(proyecticc,text="mujeres",command=mujeresanalfabetas)
 
-    for h in poblacion_zona_urbana["hombres"]:
-
-        f=h
-
-    for i in poblacion_analfabeta["hombres"]:
-
-        x=i
-
-    for m in poblacion_zona_rural_analfabeta["hombres"]:
-
-        y=m
-
-    for n in poblacion_zona_urbana_analfabeta["hombres"]:
-
-        z=n
-
-    print("El ",round(x/j*100),"% de hombres  son analfabetas")
-
-    print("El ",round(y/k*100),"% de hombres que viven en la zona rural son analfabetas")
-
-    print("El ",round(z/f*100),"% de hombres que viven en la zona urbana son analfabetas")
+    botondemujeres2.place(x=220,y=190)
 
 
 
+def deseasaberelporcentaje():
 
+    desesoporcentaje=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?",font=("Comic Sans MS",10))
+
+    desesoporcentaje.place(x=10,y=125)
+
+    botonC_si_pregunta=Button(proyecticc,text="si",command=porcentajeanalfabetashombresomujeres)
+
+    botonC_si_pregunta.place(x=180,y=148)
+
+    botonC_no_pregunta=Button(proyecticc,text="no")
+
+    botonC_no_pregunta.place(x=200,y=148)
 
 def sipresionasnoenlaprimera():
 
-    MiLabel4=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ")
+    if 1 in cambiarsino:
 
-    MiLabel4.grid(row=8,column=1)
+        MiLabel4=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ",font=("Comic Sans MS",10))
 
+        MiLabel4.place(x=10,y=85)
 
+        BotonB_si_pregunta2=Button(proyecticc,text="si",command=deseasaberelporcentaje)
 
+        BotonB_si_pregunta2.place(x=180,y=105)
 
+        BotonB_no_pregunta2=Button(proyecticc,text="no")
 
-#función principal
-
-def porcentaje_poblacion_dificultad(a, b):
-
-    if a=="si":
-
-        if b=="si":
-
-            c=input("Escriba hombres/mujeres")
-
-            if c=="hombres":
-
-                hombres_dificultad()
-
-            if c=="mujeres":
-
-                mujeres_dificultad()
-
-    if a=="no":
-
-        d=input("¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ")
-
-        if d=="si":
-
-            b=input("¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: " )
-
-            if b=="si":
-
-                c=input("Escriba hombres/mujeres: ")
-
-                if c=="hombres":
-
-                    analfabetismo_hombres()
-
-                elif c=="mujeres":
-
-                    analfabetismo_mujeres()
-
-                else:
-
-                    print("el dato es inválido, vuelva a colocarlo")
-
-                    d=="si"
-
-                    b=="si"
+        BotonB_no_pregunta2.place(x=200,y=105)
 
 
 
+        cambiarsino.remove(1)
 
-
-a=input("¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no: ")
-
-b=input("¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: " )
-
-
-
-
-
-porcentaje_poblacion_dificultad(a,b)
 
 proyecticc=Tk()
 
@@ -282,23 +177,25 @@ miFrame=Frame(proyecticc,width=1200,height=600)
 
 miFrame.pack()
 
+miFrame.config(cursor="hand2")
+
 proyecticc.title("Proyecto de Icc")
 
-PrimerLabel=Label(miFrame,text="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones")
+PrimerLabel=Label(miFrame,text="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones",font=("Comic Sans MS",10))
 
-PrimerLabel.grid(row=1,column=1)
+PrimerLabel.place(x=10,y=10)
 
-SegundoLabel=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no:")
+SegundoLabel=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no:",font=("Comic Sans MS",10))
 
-SegundoLabel.grid(row=2,column=1)
+SegundoLabel.place(x=10,y=28)
 
-botonenvio=Button(proyecticc,text="Si",command=segundapregunta)
+botonenvio_pregunta1=Button(proyecticc,text="si",command=sipresionassienlaprimera)
 
-botonenvio.pack()
+botonenvio_pregunta1.place(x=180,y=60)
 
-botonenvio2=Button(proyecticc,text="No",command=sipresionasnoenlaprimera)
+botonenvio2_pregunta1=Button(proyecticc,text="no",command=sipresionasnoenlaprimera)
 
-botonenvio2.pack()
+botonenvio2_pregunta1.place(x=200,y=60)
 
 
 
