@@ -40,15 +40,15 @@ def sipresionoHombres():
 
     if 2 in cambiarsino:
 
-        hombresdificultad=Label(miFrame,text="El  9 % de mujeres  sufren alguna dificultad",font=("Comic Sans MS",10))
+        hombresdificultad=Label(miFrame,text="El  9 % de hombres  sufren alguna dificultad",font=("Comic Sans MS",10))
 
         hombresdificultad.place(x=10,y=180)
 
-        hombresrural=Label(miFrame,text="El  9 % de mujeres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
+        hombresrural=Label(miFrame,text="El  9 % de hombres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
 
         hombresrural.place(x=10,y=200)
 
-        hombresurbana=Label(miFrame,text="El  9 % de mujeres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
+        hombresurbana=Label(miFrame,text="El  9 % de hombres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
 
         hombresurbana.place(x=10,y=220)
 
