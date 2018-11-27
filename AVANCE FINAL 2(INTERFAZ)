@@ -8,15 +8,15 @@ def Desicionentrehombresymujeres():
 
     decide_HoM=Label(miFrame,text="Presione el boton del genero que le interesa:",font=("Comic Sans MS",10))
 
-    decide_HoM.place(x=10,y=130)
+    decide_HoM.place(x=10,y=155)
 
     botondeloshombres=Button(proyecticc,text="Hombres",command=sipresionoHombres)
 
-    botondeloshombres.place(x=150,y=150)
+    botondeloshombres.place(x=150,y=182)
 
     botondelasmujeres=Button(proyecticc,text="Mujeres",command=sipresionoMujeres)
 
-    botondelasmujeres.place(x=220,y=150)
+    botondelasmujeres.place(x=220,y=182)
 
 def sipresionoMujeres():
 
@@ -24,15 +24,15 @@ def sipresionoMujeres():
 
         mujeresdificultad=Label(miFrame,text="El  12 % de mujeres  sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        mujeresdificultad.place(x=10,y=180)
+        mujeresdificultad.place(x=10,y=210)
 
         mujereszonarural=Label(miFrame,text="El  10 % de mujeres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        mujereszonarural.place(x=10,y=200)
+        mujereszonarural.place(x=10,y=235)
 
         mujereszonaurbana=Label(miFrame,text="El  12 % de mujeres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        mujereszonaurbana.place(x=10,y=220)
+        mujereszonaurbana.place(x=10,y=260)
 
         cambiarsino.remove(2)
 
@@ -42,15 +42,15 @@ def sipresionoHombres():
 
         hombresdificultad=Label(miFrame,text="El  9 % de hombres  sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        hombresdificultad.place(x=10,y=180)
+        hombresdificultad.place(x=10,y=210)
 
         hombresrural=Label(miFrame,text="El  9 % de hombres que viven en la zona rural sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        hombresrural.place(x=10,y=200)
+        hombresrural.place(x=10,y=235)
 
         hombresurbana=Label(miFrame,text="El  9 % de hombres que viven en la zona urbana sufren alguna dificultad",font=("Comic Sans MS",10))
 
-        hombresurbana.place(x=10,y=220)
+        hombresurbana.place(x=10,y=260)
 
         cambiarsino.remove(2)
 
@@ -62,15 +62,15 @@ def sipresionassienlaprimera():
 
         TercerLabel=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?, responda sí o no: ",font=("Comic Sans MS",10))
 
-        TercerLabel.place(x=10,y=85)
+        TercerLabel.place(x=10,y=95)
 
         BotonA_si_pregunta2=Button(proyecticc,text="si",command=Desicionentrehombresymujeres)
 
-        BotonA_si_pregunta2.place(x=180,y=105)
+        BotonA_si_pregunta2.place(x=180,y=125)
 
         BotonA_no_pregunta2=Button(proyecticc,text="no",command=quit)
 
-        BotonA_no_pregunta2.place(x=200,y=105)
+        BotonA_no_pregunta2.place(x=200,y=125)
 
         cambiarsino.remove(1)
 
@@ -120,7 +120,7 @@ def porcentajeanalfabetashombresomujeres():
 
     escogerHoM=Label(miFrame,text="Presione el boton del genero que le interesa",font=("Comic Sans MS",10))
 
-    escogerHoM.place(x=10,y=168)
+    escogerHoM.place(x=10,y=210)
 
     botondehombres2=Button(proyecticc,text="hombres",command=hombresanalfabetas)
 
@@ -152,15 +152,15 @@ def sipresionasnoenlaprimera():
 
         MiLabel4=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total es analfabeta?, responda sí o no: ",font=("Comic Sans MS",10))
 
-        MiLabel4.place(x=10,y=85)
+        MiLabel4.place(x=10,y=90)
 
         BotonB_si_pregunta2=Button(proyecticc,text="si",command=deseasaberelporcentaje)
 
-        BotonB_si_pregunta2.place(x=180,y=105)
+        BotonB_si_pregunta2.place(x=180,y=118)
 
         BotonB_no_pregunta2=Button(proyecticc,text="no")
 
-        BotonB_no_pregunta2.place(x=200,y=105)
+        BotonB_no_pregunta2.place(x=200,y=118)
 
 
 
@@ -169,33 +169,31 @@ def sipresionasnoenlaprimera():
 
 proyecticc=Tk()
 
-proyecticc.geometry("900x400+100+100")
+proyecticc.geometry("1325x400")
 
 proyecticc.resizable(1,1)
 
-miFrame=Frame(proyecticc,width=1200,height=600)
+miFrame=Frame(proyecticc,width=1500,height=900)
 
 miFrame.pack()
 
-miFrame.config(cursor="hand2")
-
-proyecticc.title("Proyecto de Icc")
+proyecticc.title("Proyecto de ICC")
 
 PrimerLabel=Label(miFrame,text="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones",font=("Comic Sans MS",10))
 
-PrimerLabel.place(x=10,y=10)
+PrimerLabel.place(x=0,y=10)
 
 SegundoLabel=Label(miFrame,text="¿Desea saber cuánta población con respecto a la población total tiene alguna dificultad?, responda sí o no:",font=("Comic Sans MS",10))
 
-SegundoLabel.place(x=10,y=28)
+SegundoLabel.place(x=0,y=39)
 
-botonenvio_pregunta1=Button(proyecticc,text="si",command=sipresionassienlaprimera)
+botonenvio_pregunta1=Button(proyecticc,text="sí",command=sipresionassienlaprimera)
 
-botonenvio_pregunta1.place(x=180,y=60)
+botonenvio_pregunta1.place(x=180,y=62)
 
 botonenvio2_pregunta1=Button(proyecticc,text="no",command=sipresionasnoenlaprimera)
 
-botonenvio2_pregunta1.place(x=200,y=60)
+botonenvio2_pregunta1.place(x=200,y=62)
 
 
 
