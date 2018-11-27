@@ -177,6 +177,8 @@ miFrame=Frame(proyecticc,width=1500,height=900)
 
 miFrame.pack()
 
+miFrame.config(cursor="hand2")
+
 proyecticc.title("Proyecto de ICC")
 
 PrimerLabel=Label(miFrame,text="Bienvenido, en este programa te informaremos acerca de estadísticas con respecto a dos características de la población: analfabetismo y dificultades o limitaciones",font=("Comic Sans MS",10))
