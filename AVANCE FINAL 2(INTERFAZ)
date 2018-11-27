@@ -82,15 +82,15 @@ def hombresanalfabetas():
 
         hombresquesonanalfabetas=Label(miFrame,text="El  2 % de hombres  son analfabetas",font=("Comic Sans MS",10))
 
-        hombresquesonanalfabetas.place(x=10,y=215)
+        hombresquesonanalfabetas.place(x=10,y=255)
 
         hombresanalfabetasrural=Label(miFrame,text="El  6 % de hombres que viven en la zona rural son analfabetas",font=("Comic Sans MS",10))
 
-        hombresanalfabetasrural.place(x=10,y=235)
+        hombresanalfabetasrural.place(x=10,y=280)
 
         hombresanalfabetasurbana=Label(miFrame,text="El  1 % de hombres que viven en la zona urbana son analfabetas",font=("Comic Sans MS",10))
 
-        hombresanalfabetasurbana.place(x=10,y=255)
+        hombresanalfabetasurbana.place(x=10,y=305)
 
         cambiarsino.remove(3)
 
@@ -100,15 +100,15 @@ def mujeresanalfabetas():
 
         mujeresquesonanalfabetas=Label(miFrame,text="El  6 % de mujeres  son analfabetas",font=("Comic Sans MS",10))
 
-        mujeresquesonanalfabetas.place(x=10,y=215)
+        mujeresquesonanalfabetas.place(x=10,y=255)
 
         mujeresanalfabetasrural=Label(miFrame,text="El  17 % de mujeres que viven en la zona rural son analfabetas",font=("Comic Sans MS",10))
 
-        mujeresanalfabetasrural.place(x=10,y=235)
+        mujeresanalfabetasrural.place(x=10,y=280)
 
         mujeresanalfabetasurbana=Label(miFrame,text="El  4 % de mujeres que viven en la zona urbana son analfabetas",font=("Comic Sans MS",10))
 
-        mujeresanalfabetasurbana.place(x=10,y=255)
+        mujeresanalfabetasurbana.place(x=10,y=305)
 
         cambiarsino.remove(3)
 
@@ -120,15 +120,15 @@ def porcentajeanalfabetashombresomujeres():
 
     escogerHoM=Label(miFrame,text="Presione el boton del genero que le interesa",font=("Comic Sans MS",10))
 
-    escogerHoM.place(x=10,y=210)
+    escogerHoM.place(x=10,y=200)
 
     botondehombres2=Button(proyecticc,text="hombres",command=hombresanalfabetas)
 
-    botondehombres2.place(x=150,y=190)
+    botondehombres2.place(x=150,y=228)
 
     botondemujeres2=Button(proyecticc,text="mujeres",command=mujeresanalfabetas)
 
-    botondemujeres2.place(x=220,y=190)
+    botondemujeres2.place(x=220,y=228)
 
 
 
@@ -136,15 +136,15 @@ def deseasaberelporcentaje():
 
     desesoporcentaje=Label(miFrame,text="¿Desea saber el porcentaje de hombres o mujeres con esta característica?",font=("Comic Sans MS",10))
 
-    desesoporcentaje.place(x=10,y=125)
+    desesoporcentaje.place(x=10,y=145)
 
     botonC_si_pregunta=Button(proyecticc,text="si",command=porcentajeanalfabetashombresomujeres)
 
-    botonC_si_pregunta.place(x=180,y=148)
+    botonC_si_pregunta.place(x=180,y=170)
 
     botonC_no_pregunta=Button(proyecticc,text="no")
 
-    botonC_no_pregunta.place(x=200,y=148)
+    botonC_no_pregunta.place(x=200,y=170)
 
 def sipresionasnoenlaprimera():
 
